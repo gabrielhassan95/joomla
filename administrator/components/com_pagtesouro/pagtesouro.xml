@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>COM_PAGTESOURO</name>
+    <author>Sgt Souza Lima</author>
+    <creationDate>Março 2025</creationDate>
+    <copyright>(C) 2025 Astatonn. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>lucas.lima.rk@gmail.com</authorEmail>
+    <authorUrl>https://astatonn.com</authorUrl>
+    <version>1.0.0</version>
+    <description>COM_PAGTESOURO_DESCRIPTION</description>
+    
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+    
+    <files folder="site">
+        <filename>controller.php</filename>
+        <filename>pagtesouro.php</filename>
+        <folder>controllers</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>language</folder>
+    </files>
+    
+    <languages folder="site/language">
+        <language tag="pt-BR">pt-BR/pt-BR.com_pagtesouro.ini</language>
+        <language tag="en-GB">en-GB/en-GB.com_pagtesouro.ini</language>
+    </languages>
+    
+    <administration>
+        <menu>COM_PAGTESOURO</menu>
+        <submenu>
+            <menu link="option=com_pagtesouro&amp;view=uasgs">COM_PAGTESOURO_UASGS</menu>
+            <menu link="option=com_pagtesouro&amp;view=servicos">COM_PAGTESOURO_SERVICOS</menu>
+        </submenu>
+        
+        <files folder="admin">
+            <filename>controller.php</filename>
+            <filename>pagtesouro.php</filename>
+            <folder>controllers</folder>
+            <folder>models</folder>
+            <folder>forms</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>helpers</folder>
+            <folder>sql</folder>
+            <folder>language</folder>
+        </files>
+        
+        <languages folder="admin/language">
+            <language tag="pt-BR">pt-BR/pt-BR.com_pagtesouro.ini</language>
+            <language tag="pt-BR">pt-BR/pt-BR.com_pagtesouro.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_pagtesouro.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_pagtesouro.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

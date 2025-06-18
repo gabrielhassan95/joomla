@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+        <field
+            name="id"
+            type="hidden"
+            label="COM_PAGTESOURO_FIELD_ID_LABEL"
+            default="0"
+            readonly="true"
+        />
+
+        <field
+            name="orgao"
+            type="text"
+            label="COM_PAGTESOURO_FIELD_ORGAO_LABEL"
+            description="COM_PAGTESOURO_FIELD_ORGAO_DESC"
+            size="10"
+            class="input-medium"
+            required="true"
+        />
+        
+        <field
+            name="ug"
+            type="text"
+            label="COM_PAGTESOURO_FIELD_UG_LABEL"
+            description="COM_PAGTESOURO_FIELD_UG_DESC"
+            size="10"
+            class="input-medium"
+            required="true"
+        />
+        
+        <field
+            name="descricao"
+            type="text"
+            label="COM_PAGTESOURO_FIELD_DESCRICAO_LABEL"
+            description="COM_PAGTESOURO_FIELD_DESCRICAO_DESC"
+            size="40"
+            class="input-xlarge"
+            required="true"
+        />
+        
+        <field
+            name="state"
+            type="list"
+            label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC"
+            class="chzn-color-state"
+            default="1"
+            >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+</form>

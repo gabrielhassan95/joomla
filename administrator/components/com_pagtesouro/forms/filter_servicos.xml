@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"
+            label="COM_PAGTESOURO_FILTER_SEARCH_LABEL"
+            description="COM_PAGTESOURO_FILTER_SEARCH_DESC"
+            hint="JSEARCH_FILTER"
+        />
+
+        <field
+            name="state"
+            type="status"
+            label="JOPTION_SELECT_PUBLISHED"
+            onchange="this.form.submit();"
+            >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+
+        <field
+            name="uasg_id"
+            type="sql"
+            label="COM_PAGTESOURO_FIELD_UASG_LABEL"
+            onchange="this.form.submit();"
+            query="SELECT id, CONCAT(orgao, ' - ', ug, ' (', descricao, ')') AS title FROM #__pagtesouro_uasgs WHERE state = 1 ORDER BY descricao ASC"
+            key_field="id"
+            value_field="title"
+            >
+            <option value="">COM_PAGTESOURO_OPTION_SELECT_UASG</option>
+        </field>
+    </fields>
+
+    <fields name="list">
+        <field
+            name="limit"
+            type="limitbox"
+            class="input-mini"
+            default="25"
+            label="COM_CONTENT_LIST_LIMIT"
+            description="COM_CONTENT_LIST_LIMIT_DESC"
+            onchange="this.form.submit();"
+        />
+    </fields>
+</form>
